@@ -1,0 +1,194 @@
+/* ============================================
+   Página Nosotros - estilos específicos
+   ============================================ */
+
+/* Historia */
+.story {
+  padding: 5rem 0;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.story-text h2 { margin-bottom: 1.5rem; }
+.story-text p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--trapo-gray-700);
+  margin-bottom: 1.25rem;
+}
+.story-text p:last-child { margin-bottom: 0; }
+
+.story-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.stat-card {
+  background: var(--trapo-white);
+  border: 1px solid var(--trapo-gray-100);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: var(--t-base);
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--trapo-blue);
+}
+.stat-card.highlight {
+  background: var(--trapo-blue);
+  color: var(--trapo-white);
+  border-color: var(--trapo-blue);
+}
+.stat-card .num {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--trapo-black);
+  margin-bottom: 0.5rem;
+}
+.stat-card.highlight .num { color: var(--trapo-white); }
+.stat-card .lbl {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--trapo-gray-500);
+  letter-spacing: 0.02em;
+}
+.stat-card.highlight .lbl { color: rgba(255,255,255,0.85); }
+
+/* Misión / Valores */
+.mission-section {
+  background: var(--trapo-gray-100);
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.value-card {
+  background: var(--trapo-white);
+  border-radius: 14px;
+  padding: 2.25rem;
+  border: 1px solid var(--trapo-gray-100);
+  transition: var(--t-base);
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.value-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: var(--trapo-blue-light);
+  color: var(--trapo-blue);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1.5rem;
+}
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.875rem;
+}
+.value-card p {
+  font-size: 0.9375rem;
+  color: var(--trapo-gray-700);
+  line-height: 1.6;
+}
+
+/* Cobertura */
+.coverage {
+  padding: 5rem 0;
+}
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.zone-card {
+  padding: 1.75rem 1.25rem;
+  background: var(--trapo-white);
+  border: 1px solid var(--trapo-gray-100);
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--t-base);
+  position: relative;
+}
+.zone-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--trapo-blue);
+  box-shadow: var(--shadow-md);
+}
+.zone-card.expand {
+  background: var(--trapo-black);
+  color: var(--trapo-white);
+  border-color: var(--trapo-black);
+}
+.zone-card.expand:hover { background: var(--trapo-blue); border-color: var(--trapo-blue); }
+.zone-name {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--trapo-black);
+  margin-bottom: 0.25rem;
+}
+.zone-card.expand .zone-name { color: var(--trapo-white); }
+.zone-count {
+  font-size: 0.8125rem;
+  color: var(--trapo-gray-500);
+  font-weight: 500;
+}
+.zone-card.expand .zone-count { color: var(--trapo-cyan); font-weight: 600; }
+
+/* Equipo */
+.team-section {
+  padding-bottom: 5rem;
+}
+.team-strip {
+  background: var(--trapo-black);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+.team-stat {
+  text-align: left;
+  border-left: 2px solid var(--trapo-blue);
+  padding-left: 1.25rem;
+}
+.team-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--trapo-white);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.team-stat span {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--trapo-gray-300);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .values-grid { grid-template-columns: 1fr; }
+  .zones-grid { grid-template-columns: 1fr 1fr; }
+  .team-strip { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+}
+
+@media (max-width: 720px) {
+  .story-stats { grid-template-columns: 1fr 1fr; }
+  .zones-grid { grid-template-columns: 1fr 1fr; }
+  .team-strip { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+}
