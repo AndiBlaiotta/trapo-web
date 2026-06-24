@@ -665,6 +665,32 @@ section {
 .reference-author .name { font-weight: 600; font-size: 0.9375rem; }
 .reference-author .role { font-size: 0.8125rem; color: var(--trapo-gray-500); }
 
+.reference-card .stars {
+  color: var(--trapo-accent);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  font-size: 0.9375rem;
+  color: var(--trapo-gray-700);
+}
+.reviews-rating .stars-lg {
+  color: var(--trapo-accent);
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+.reviews-rating strong { color: var(--trapo-black); }
+.references-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
 /* ============================================
    CTA Final
    ============================================ */
